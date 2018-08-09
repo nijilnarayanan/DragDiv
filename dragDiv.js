@@ -1,17 +1,18 @@
-const drag = document.querySelector('drag')
+const drag = document
+drag.addEventListener('mousemove',draggingStarts);
+drag.addEventListener('mousedown',mouseDown);
+drag.addEventListener('drop',draggingDrop);
 
 function draggingStarts(e){
-    e.target;
-    drag.addEventListener('dragstart',draggingStarts);
+  
+   console.log('dragging is happening ', e)
 }
 
-function draggingOver(e){
-   e.preventDefault();
-   drag.addEventListener('dragover',draggingOver);
-    }
+function mouseDown(e){
+    console.log('mosuedown is happening ', e)
+}
 
 function draggingDrop(e){
-    e.preventDefault();
-    drag.addEventListener('drop',draggingDrop);
-    }
+    console.log('dragging is happening ', e)
+}
 
